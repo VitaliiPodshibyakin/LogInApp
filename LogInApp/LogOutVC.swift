@@ -7,23 +7,44 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LogOutVC: UIViewController {
 
+    // MARK: - IB Outlets
+    @IBOutlet var userLabel: UILabel!
+    
+    // MARK: - Public properties
+    var userName = ""
+    
+    // MARK: - Private properties
+    private let primaryColor = UIColor(
+        red: 50/255,
+        green: 109/255,
+        blue: 178/255,
+        alpha: 1
+    )
+    private let secondaryColor = UIColor(
+        red: 157/255,
+        green: 149/255,
+        blue: 210/255,
+        alpha: 1
+    )
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        userLabel.text = "Hello, \(userName)"
+        view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+  
+}
+// MARK: - Set background color
+extension UIView {
+    func addVerticalGradientLayer(topColor: UIColor, bottomColor: UIColor) {
+        let gradient = CAGradientLayer()
+        gradient.frame = bounds
+        gradient.colors = [topColor.cgColor, bottomColor.cgColor]
+        gradient.locations = [0.0, 1.0]
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 0, y: 1)
+        layer.insertSublayer(gradient, at: 0)
     }
-    */
-
 }
