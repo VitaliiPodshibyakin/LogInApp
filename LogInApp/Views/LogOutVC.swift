@@ -13,25 +13,25 @@ class LogOutVC: UIViewController {
     @IBOutlet var userLabel: UILabel!
     
     // MARK: - Public properties
-    var userName = ""
+    var user: User!
     
     // MARK: - Private properties
     private let primaryColor = UIColor(
-        red: 50/255,
+        red: 250/255,
         green: 109/255,
-        blue: 178/255,
+        blue: 30/255,
         alpha: 1
     )
     private let secondaryColor = UIColor(
-        red: 157/255,
+        red: 107/255,
         green: 149/255,
-        blue: 210/255,
+        blue: 160/255,
         alpha: 1
     )
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        userLabel.text = "Hello, \(userName)"
+        userLabel.text = "Hello, \(user.person.fullName)"
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
     }
   

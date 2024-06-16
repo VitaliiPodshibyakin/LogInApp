@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F20F2522C1F606A0062797D /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20F2512C1F606A0062797D /* ImageVC.swift */; };
 		3F5BBFA02C1A1EC400D299C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5BBF9F2C1A1EC400D299C3 /* AppDelegate.swift */; };
 		3F5BBFA22C1A1EC400D299C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5BBFA12C1A1EC400D299C3 /* SceneDelegate.swift */; };
 		3F5BBFA42C1A1EC400D299C3 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5BBFA32C1A1EC400D299C3 /* LogInVC.swift */; };
@@ -14,9 +15,12 @@
 		3F5BBFA92C1A1EC600D299C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5BBFA82C1A1EC600D299C3 /* Assets.xcassets */; };
 		3F5BBFAC2C1A1EC600D299C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5BBFAA2C1A1EC600D299C3 /* LaunchScreen.storyboard */; };
 		3F5BBFB42C1A2CD700D299C3 /* LogOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5BBFB32C1A2CD700D299C3 /* LogOutVC.swift */; };
+		3FD2BFDF2C1F4C6A009641AB /* AboutMeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2BFDE2C1F4C6A009641AB /* AboutMeVC.swift */; };
+		3FE336252C1F3D8D006E219F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE336242C1F3D8D006E219F /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F20F2512C1F606A0062797D /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
 		3F5BBF9C2C1A1EC400D299C3 /* LogInApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogInApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5BBF9F2C1A1EC400D299C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F5BBFA12C1A1EC400D299C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		3F5BBFAB2C1A1EC600D299C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F5BBFAD2C1A1EC600D299C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F5BBFB32C1A2CD700D299C3 /* LogOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutVC.swift; sourceTree = "<group>"; };
+		3FD2BFDE2C1F4C6A009641AB /* AboutMeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeVC.swift; sourceTree = "<group>"; };
+		3FE336242C1F3D8D006E219F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,59 @@
 		3F5BBF9E2C1A1EC400D299C3 /* LogInApp */ = {
 			isa = PBXGroup;
 			children = (
-				3F5BBF9F2C1A1EC400D299C3 /* AppDelegate.swift */,
-				3F5BBFA12C1A1EC400D299C3 /* SceneDelegate.swift */,
-				3F5BBFA32C1A1EC400D299C3 /* LogInVC.swift */,
-				3F5BBFB32C1A2CD700D299C3 /* LogOutVC.swift */,
-				3F5BBFA52C1A1EC400D299C3 /* Main.storyboard */,
-				3F5BBFA82C1A1EC600D299C3 /* Assets.xcassets */,
-				3F5BBFAA2C1A1EC600D299C3 /* LaunchScreen.storyboard */,
-				3F5BBFAD2C1A1EC600D299C3 /* Info.plist */,
+				3FE3361E2C1F335D006E219F /* Views */,
+				3FE3361F2C1F337C006E219F /* Model */,
+				3FE336202C1F3392006E219F /* Storyboards */,
+				3FE336232C1F33EC006E219F /* Media */,
+				3FE336212C1F33C9006E219F /* App */,
 			);
 			path = LogInApp;
+			sourceTree = "<group>";
+		};
+		3FE3361E2C1F335D006E219F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3F5BBFA32C1A1EC400D299C3 /* LogInVC.swift */,
+				3F5BBFB32C1A2CD700D299C3 /* LogOutVC.swift */,
+				3FD2BFDE2C1F4C6A009641AB /* AboutMeVC.swift */,
+				3F20F2512C1F606A0062797D /* ImageVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3FE3361F2C1F337C006E219F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3FE336242C1F3D8D006E219F /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3FE336202C1F3392006E219F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3F5BBFA52C1A1EC400D299C3 /* Main.storyboard */,
+				3F5BBFAA2C1A1EC600D299C3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3FE336212C1F33C9006E219F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3F5BBF9F2C1A1EC400D299C3 /* AppDelegate.swift */,
+				3F5BBFA12C1A1EC400D299C3 /* SceneDelegate.swift */,
+				3F5BBFAD2C1A1EC600D299C3 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3FE336232C1F33EC006E219F /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				3F5BBFA82C1A1EC600D299C3 /* Assets.xcassets */,
+			);
+			path = Media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +192,10 @@
 			files = (
 				3F5BBFA42C1A1EC400D299C3 /* LogInVC.swift in Sources */,
 				3F5BBFA02C1A1EC400D299C3 /* AppDelegate.swift in Sources */,
+				3F20F2522C1F606A0062797D /* ImageVC.swift in Sources */,
+				3FD2BFDF2C1F4C6A009641AB /* AboutMeVC.swift in Sources */,
 				3F5BBFB42C1A2CD700D299C3 /* LogOutVC.swift in Sources */,
+				3FE336252C1F3D8D006E219F /* User.swift in Sources */,
 				3F5BBFA22C1A1EC400D299C3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,7 +350,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GHQ3446M48;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LogInApp/Info.plist;
+				INFOPLIST_FILE = LogInApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -326,7 +378,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GHQ3446M48;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LogInApp/Info.plist;
+				INFOPLIST_FILE = LogInApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

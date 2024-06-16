@@ -13,28 +13,45 @@ class LogInVC: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    
+    
+    
     // MARK: - Private properties
-    private let userName = "u"
-    private let password = "p"
+    private let user = User.getUser()
     
     // MARK: Navigation
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let logoutVC = segue.destination as? LogOutVC else { return }
+//        logoutVC.userName = "\(user.person.firstName) \(user.person.secondName)"
+//    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let logoutVC = segue.destination as? LogOutVC else { return }
-        logoutVC.userName = userName
+        
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        for viewController in viewControllers {
+            if let logoutVC = viewController as? LogOutVC {
+                logoutVC.user = user
+            } else if let navigationVC = viewController as? UINavigationController {
+                let aboutMeVC = navigationVC.topViewController as! AboutMeVC
+                aboutMeVC.user = user
+            }
+        }
+        
     }
+    
     
     // MARK: IBActions
     @IBAction func logInButtonPressed() {
-        if userNameTF.text != userName || passwordTF.text != password {
+        if userNameTF.text != user.userName || passwordTF.text != user.password {
             showAlert(with: "Oops", and: "Wrong User name or Password")
         }
     }
 
     @IBAction func forgotName(_ sender: Any) {
-        showAlert(with: "", and: "Your User Name is 'name'")
+        showAlert(with: "", and: "Your User Name is '\(user.userName)'")
     }
     @IBAction func forgotPassword(_ sender: Any) {
-        showAlert(with: "", and: "Your Password is 'password'")
+        showAlert(with: "", and: "Your Password is '\(user.password)'")
     }
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
